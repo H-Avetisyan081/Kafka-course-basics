@@ -1,0 +1,4 @@
+# Project exclude paths
+/.gradle/
+/kafka-basics/out/
+/kafka-basics/out/production/classes/
