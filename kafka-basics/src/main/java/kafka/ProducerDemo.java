@@ -15,12 +15,12 @@ public class ProducerDemo {
 
     public static void main(String[] args) {
 
-        System.out.println("ojijijijijji");
-        log.info("Hello World");
+        log.info("Hello ");
+
 
         //create Producer properties
         Properties properties = new Properties();
-        properties.setProperty("bootstrap.servers", "127.0.0.1:9092");
+        properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
         properties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 
@@ -35,7 +35,6 @@ public class ProducerDemo {
 
         //flush and close
         producer.flush();
-
         producer.close();
     }
 }
